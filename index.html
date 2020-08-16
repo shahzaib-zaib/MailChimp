@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MailChimp Integration</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<style>
+  .map-container-section {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  .map-container-section iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+</style>
+
+<body>
+
+<!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container">
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Brand -->
+          <a class="navbar-brand waves-effect" href="./Main Page.html" target="_blank">
+              <strong class="blue-text">Ayesha Art Gallery</strong>
+          </a>
+
+          <!-- Collapse -->
+          
+
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+              <!-- Left -->
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect" href="#">Home
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect" href="#" target="_blank">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect" href="#" target="_blank">Products</a>
+                      <span class="sr-only">(current)</span>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-effect" href="#" target="_blank">FAQs</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#" target="_blank">Contact</a>
+                  </li>
+              </ul>
+          </div>
+          
+          <div class="dropdown">
+            <i class="far fa-user" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" data-toggle="modal" data-target="#elegantModalForm">Login / Register</a>
+            </div>
+          </div>
+          
+          <div class="nav-item">
+            <a class="nav-link waves-effect waves-light">
+            <i class="fas fa-shopping-cart"></i><span class="badge badge-pill red">1</span>
+              </a>
+            </div>
+          </div>
+          
+      </div>
+    </nav>
+<!-- Navbar -->
+
+    <!--Main layout-->
+    <section class="mb-4">
+
+      <div class="container mt-5 pt-5">
+
+ 
+        <!--Section: Content-->
+        <section class="dark-grey-text mb-5">
+          
+          
+    
+          <!-- Section heading -->
+          <h3 class="font-weight-bold text-center mb-4">Contact Us</h3>
+          <!-- Section description -->
+          <p class="text-center w-responsive mx-auto pb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
+            eum porro a pariatur veniam.</p>
+    
+          <!-- Grid row -->
+          <div class="row">
+    
+            <!-- Grid column -->
+            <div class="col-lg-12 mb-lg-0 pb-lg-3 mb-4">
+    
+              <!-- Form with header -->
+              <div class="card">
+                <div class="card-body">
+                  <form action="form-submit.php" method="POST">
+                    <div class="form-header blue accent-1">
+                      <h3 class="mt-2"><i class="fas fa-envelope"></i> Write to us:</h3>
+                    </div>
+                    <p class="dark-grey-text">We'll write rarely, but only the best content.</p>
+                    <!-- Body -->
+                    <div class="md-form">
+                      <i class="fas fa-user prefix grey-text"></i>
+                      <input type="text" name="fname" id="form-name" class="form-control">
+                      <label for="form-name">First Name</label>
+                    </div>
+                    <div class="md-form">
+                      <i class="fas fa-user prefix grey-text"></i>
+                      <input type="text" name="lname" id="form-name" class="form-control">
+                      <label for="form-name">Last Name</label>
+                    </div>
+                    <div class="md-form">
+                      <i class="fas fa-envelope prefix grey-text"></i>
+                      <input type="text" name="email" id="form-email" class="form-control">
+                      <label for="form-email">Your email</label>
+                    </div>
+                    <div class="md-form">
+                      <i class="fas fa-tag prefix grey-text"></i>
+                      <input type="text" name="comnamy" id="form-Subject" class="form-control">
+                      <label for="form-Subject">Company Name</label>
+                    </div>
+                    <div class="md-form">
+                      <i class="fas fa-tag prefix grey-text"></i>
+                      <input type="text" name="employ" id="form-Subject" class="form-control">
+                      <label for="form-Subject">No. of Employees</label>
+                    </div>
+                    <div class="text-center">
+                      <button type="submit" name="submit" class="btn btn-light-blue">Submit</button>
+                    </div>
+                  </form>
+                  <!-- Header -->
+                  
+                </div>
+              </div>
+              <!-- Form with header -->
+    
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <!-- <div class="col-lg-7">
+    
+              
+              <div id="map-container-section" class="z-depth-1-half map-container-section mb-4" style="height: 400px">
+                <iframe src="https://maps.google.com/maps?q=Manhatan&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                  style="border:0" allowfullscreen></iframe>
+              </div>
+              
+              <div class="row text-center">
+                <div class="col-md-4">
+                  <a class="btn-floating blue accent-1">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </a>
+                  <p>New York, 94126</p>
+                  <p class="mb-md-0">United States</p>
+                </div>
+                <div class="col-md-4">
+                  <a class="btn-floating blue accent-1">
+                    <i class="fas fa-phone"></i>
+                  </a>
+                  <p>+ 01 234 567 89</p>
+                  <p class="mb-md-0">Mon - Fri, 8:00-22:00</p>
+                </div>
+                <div class="col-md-4">
+                  <a class="btn-floating blue accent-1">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  <p>info@gmail.com</p>
+                  <p class="mb-0">sale@gmail.com</p>
+                </div>
+              </div>
+    
+            </div> -->
+            <!-- Grid column -->
+    
+          </div>
+          <!-- Grid row -->
+    
+        </section>
+        <!--Section: Content-->
+    
+    
+      </div>
+
+    </section>
+    <!--Main layout-->
+
+    
+      <footer class="page-footer font-small _5kjht pt-4">
+        <div class="container text-center text-md-left">
+          <form class="input-grey mb-5" action="" method="post" target="_blank">
+            <div class="form-row">
+              <div class="col-md-4 ml-auto">
+                <div class="input-group input-group-lg z-depth-1">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text rgba-white-light border-0"><i class="fa fa-envelope white-text"></i></span>
+                  </div>
+                  <input type="email" name="EMAIL" class="form-control form-control-lg rgba-white-light white-text border-0 z-depth-0" placeholder="Email Address">
+                </div>
+              </div>
+                <div class="col-md-2 mr-auto">
+                  <button class="btn btn-block btn-primary">Subscribe</button>
+                </div>
+              </div>
+            </form>
+              <div class="footer-social">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="footer-social-icons">
+                      <h2 class="_2Rjk">Follow us</h2>
+                      <ul class="list-inline">
+                        <li class="m-0-bottom p-0-right">
+                          <a href="https://www.facebook.com/Ayeshartgallery" target="_blank" title="Visit Ayesha Art Gallery on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li class="m-0-bottom p-0-right">
+                          <a href="https://www.linkedin.com/Ayeshartgallery" target="_blank" title="Visit Ayesha Art Gallery on linkedin">
+                            <i class="fab fa-linkedin"></i>
+                          </a>
+                        </li>
+                        <li class="m-0-bottom p-0-right">
+                          <a href="https://www.twitter.com/Ayeshartgallery" target="_blank" title="Visit Ayesha Art Gallery on twitter">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li class="m-0-bottom p-0-right">
+                          <a href="https://www.youtube.com/Ayeshartgallery" target="_blank" title="Visit Ayesha Art Gallery on youtube">
+                            <i class="fab fa-youtube"></i>
+                          </a>
+                        </li>
+                        <li class="m-0-bottom p-0-right">
+                          <a href="https://www.instagram.com/Ayeshartgallery" target="_blank" title="Visit Ayesha Art Gallery on instagram">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="footer-social-icons footer-download">
+                        <h2 class="_2Rjk">Mobile app</h2>
+                        <ul class="list-inline">
+                          <li class="m-0-bottom p-0-right">
+                            <a href="#" target="_blank" title="Download Ayesha Art Gallery app from Itunes">
+                              <i class="fab fa-apple"></i>
+                            </a>
+                          </li>
+                          <li class="m-0-bottom p-0-right">
+                            <a href="#" target="_blank" title="Download Ayesha Art Gallery app from Google Play">
+                              <i class="fab fa-android"></i>
+                            </a>
+                          </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="_7HyT py-6">© 2019-2020
+                <a href="https://mdbootstrap.com/education/bootstrap/">Zaib.&trade;</a>
+              </div>
+        </footer>
+        <!-- Modal -->
+        <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <!--Content-->
+          <div class="modal-content form-elegant">
+            <!--Header-->
+            <div class="modal-header text-center">
+              <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!--Body-->
+            <div class="modal-body mx-4">
+              <!--Body-->
+              <div class="md-form mb-5">
+                <input type="email" id="Form-email1" class="form-control validate">
+                <label data-error="wrong" data-success="right" for="Form-email1">Your email</label>
+              </div>
+
+              <div class="md-form pb-3">
+                <input type="password" id="Form-pass1" class="form-control validate">
+                <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
+                <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
+                    Password?</a></p>
+              </div>
+
+              <div class="text-center mb-3">
+                <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a">Sign in</button>
+              </div>
+              <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
+                with:</p>
+
+              <div class="row my-3 d-flex justify-content-center">
+                <!--Facebook-->
+                <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
+                <!--Twitter-->
+                <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
+                <!--Google +-->
+                <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button>
+              </div>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer mx-5 pt-3 mb-1">
+              <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="blue-text ml-1">
+                  Sign Up</a></p>
+            </div>
+          </div>
+          <!--/.Content-->
+        </div>
+        </div>
+        <!-- Modal -->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+
+    </script>
+</body>
+
+</html>
