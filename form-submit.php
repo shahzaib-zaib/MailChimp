@@ -3,8 +3,8 @@
 
     use \DrewM\MailChimp\MailChimp;
 
-    $api_key = "";
-    $list_id = "";
+    $api_key = "a5aec72851eb576ac6d2bc51d33df7ff-us17";
+    $list_id = "a99ae6af1a";
 
     $MailChimp = new MailChimp($api_key);
     
@@ -16,7 +16,8 @@
         $employeeno = $_POST['employ'];
 
         $result = $MailChimp->post("lists/$list_id/members", [
-				'email_address' => 'davy@example.com',
+                'email_address' => $email,
+                'merge_fields' => ['FNAME'=>$fname, 'LNAME'=>$lname, 'COMPANY'=>$companyName, 'EMPLOYEES'=>$employeeno],
 				'status'        => 'subscribed',
 			]);
 
