@@ -1,6 +1,6 @@
 <?php
 
-    if($_POST['submit']){
+    if(isset($_POST['submit'])){
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $email = $_POST['email'];
@@ -9,6 +9,7 @@
 
         echo $fname . " " . $lname;
         echo $email;
+        echo $companyName;
         echo $employeeno;
     }
 
